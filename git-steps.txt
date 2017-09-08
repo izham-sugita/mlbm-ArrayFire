@@ -1,0 +1,352 @@
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire$ ls
+af_test_1         basic        cuda-call         fdtd.cpp              montecarlo_pi.cpp
+af_test_1.1.cpp   basic-0      cuda_ldpath       helloworld.cpp        montecarlo_pi.cpp~
+af_test_1.1.cpp~  #basic.cpp#  examples          helloworld.cpp~       readme_lafopencl.txt
+af_test_1.cpp     basic.cpp    FDArrayFire       helloworld_laf        readme.txt
+af_test_1.cpp~    basicOpenCL  FDArrayFire.cpp   helloworld_lafopencl  swe.cpp
+a.out             cg.cpp       FDArrayFire.cpp~  Makefile
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire$ cd cuda-call/
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call$ ls
+arrayToHost.cpp        HowToUseTile.cpp~  TestArrayFireObject             TestFixedArray.c
+arrayToHost.cpp~       Makefile           TestArrayFireObject.cpp         TestFixedArray.c~
+backBurner             Makefile-old       TestArrayFireObject.cpp~        TestFixedKernel
+deviceQuery            PointerArray       TestArrayFireObjectCUDA         #TestFixedKernel.cu#
+fdmethod               PointerArray.cpp   TestArrayFireObjectCUDA.cu      TestFixedKernel.cu
+fdmethod.cpp           PointerArray.cpp~  TestArrayFireObjectCUDA.cu~     TestFixedKernel.cu~
+fdmethod.cpp~          simple             TestArrayFireObjectCUDA-v2      time-data-heateq.ods
+heap_memory_limit.txt  simple.cu          TestArrayFireObjectCUDA-v2.cu   time-data.txt
+HowToUseConvolve       simple.cu~         TestArrayFireObjectCUDA-v2.cu~  twoDimensional.cpp
+HowToUseConvolve.cpp   simple.h           TestArrayPointer                twoDimensional.cpp~
+HowToUseConvolve.cpp~  simple.h~          TestArrayPointer.cpp
+HowToUseTile           simpleOriginal     TestArrayPointer.cpp~
+HowToUseTile.cpp       temp.dat           TestFixedArray
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call$ git clone https://github.com/izham-sugita/mlbm-ArrayFire.git
+Cloning into 'mlbm-ArrayFire'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call$ ls
+arrayToHost.cpp        HowToUseTile.cpp~  temp.dat                        TestFixedArray
+arrayToHost.cpp~       Makefile           TestArrayFireObject             TestFixedArray.c
+backBurner             Makefile-old       TestArrayFireObject.cpp         TestFixedArray.c~
+deviceQuery            mlbm-ArrayFire     TestArrayFireObject.cpp~        TestFixedKernel
+fdmethod               PointerArray       TestArrayFireObjectCUDA         #TestFixedKernel.cu#
+fdmethod.cpp           PointerArray.cpp   TestArrayFireObjectCUDA.cu      TestFixedKernel.cu
+fdmethod.cpp~          PointerArray.cpp~  TestArrayFireObjectCUDA.cu~     TestFixedKernel.cu~
+heap_memory_limit.txt  simple             TestArrayFireObjectCUDA-v2      time-data-heateq.ods
+HowToUseConvolve       simple.cu          TestArrayFireObjectCUDA-v2.cu   time-data.txt
+HowToUseConvolve.cpp   simple.cu~         TestArrayFireObjectCUDA-v2.cu~  twoDimensional.cpp
+HowToUseConvolve.cpp~  simple.h           TestArrayPointer                twoDimensional.cpp~
+HowToUseTile           simple.h~          TestArrayPointer.cpp
+HowToUseTile.cpp       simpleOriginal     TestArrayPointer.cpp~
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call$ cd mlbm-ArrayFire/
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ clear
+
+
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git init
+Reinitialized existing Git repository in /home/sugita/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire/.git/
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ emacs test.txt &
+[1] 3555
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md  test.txt
+[1]+  Done                    emacs test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md  test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ touch test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md  test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git commit -m "Testing file test.txt"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'sugita@sugita-GT70-2OC-2OD.(none)')
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git config --global user.email "sugita5019@gmail.com"
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git commit -m "Testing file test.txt"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+	test.txt
+
+nothing added to commit but untracked files present
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git pull origin master
+From https://github.com/izham-sugita/mlbm-ArrayFire
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git log
+commit 0c720888c8fd190b0761132cb95bafb2915301ec
+Author: Muhammad Izham <30282614+izham-sugita@users.noreply.github.com>
+Date:   Mon Aug 28 16:30:39 2017 +0900
+
+    Create README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md  test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git add test.txt 
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git log
+commit 0c720888c8fd190b0761132cb95bafb2915301ec
+Author: Muhammad Izham <30282614+izham-sugita@users.noreply.github.com>
+Date:   Mon Aug 28 16:30:39 2017 +0900
+
+    Create README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git commit 
+Aborting commit due to empty commit message.
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   test.txt
+
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git push origin master
+Username for 'https://github.com': sugita5019@gmail.com
+Password for 'https://sugita5019@gmail.com@github.com': 
+Everything up-to-date
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git log
+commit 0c720888c8fd190b0761132cb95bafb2915301ec
+Author: Muhammad Izham <30282614+izham-sugita@users.noreply.github.com>
+Date:   Mon Aug 28 16:30:39 2017 +0900
+
+    Create README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git checkout master
+A	test.txt
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   test.txt
+
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md  test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git commit -m "New file"
+[master 33082fd] New file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git log
+commit 33082fd7c9c76817aa6f90f7c4752b0620f909f6
+Author: sugita <sugita5019@gmail.com>
+Date:   Fri Sep 8 14:32:21 2017 +0900
+
+    New file
+
+commit 0c720888c8fd190b0761132cb95bafb2915301ec
+Author: Muhammad Izham <30282614+izham-sugita@users.noreply.github.com>
+Date:   Mon Aug 28 16:30:39 2017 +0900
+
+    Create README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': sugita5019@gmail.com
+Password for 'https://sugita5019@gmail.com@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/izham-sugita/mlbm-ArrayFire.git
+   0c72088..33082fd  master -> master
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git log
+commit 33082fd7c9c76817aa6f90f7c4752b0620f909f6
+Author: sugita <sugita5019@gmail.com>
+Date:   Fri Sep 8 14:32:21 2017 +0900
+
+    New file
+
+commit 0c720888c8fd190b0761132cb95bafb2915301ec
+Author: Muhammad Izham <30282614+izham-sugita@users.noreply.github.com>
+Date:   Mon Aug 28 16:30:39 2017 +0900
+
+    Create README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ ls
+README.md  test.txt
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ emacs test.txt &
+[1] 4267
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': sugita5019@gmail.com
+Password for 'https://sugita5019@gmail.com@github.com': 
+Everything up-to-date
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git log
+commit 33082fd7c9c76817aa6f90f7c4752b0620f909f6
+Author: sugita <sugita5019@gmail.com>
+Date:   Fri Sep 8 14:32:21 2017 +0900
+
+    New file
+
+commit 0c720888c8fd190b0761132cb95bafb2915301ec
+Author: Muhammad Izham <30282614+izham-sugita@users.noreply.github.com>
+Date:   Mon Aug 28 16:30:39 2017 +0900
+
+    Create README.md
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git commit -m "Updated test.txt"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   test.txt
+
+no changes added to commit
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git push origin master
+Username for 'https://github.com': sugita5019@gmail.com
+Password for 'https://sugita5019@gmail.com@github.com': 
+Everything up-to-date
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git add test.txt 
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   test.txt
+
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git commit -m "Updated test.txt"
+[master e1f29cf] Updated test.txt
+ 1 file changed, 2 insertions(+)
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': sugita5019@gmail.com
+Password for 'https://sugita5019@gmail.com@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/izham-sugita/mlbm-ArrayFire.git
+   33082fd..e1f29cf  master -> master
+sugita@sugita-GT70-2OC-2OD:~/cpp-codes/arrayfire/cuda-call/mlbm-ArrayFire$ 
+
