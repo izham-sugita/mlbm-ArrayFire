@@ -190,7 +190,6 @@ flops += diffusion2d(imax,jmax, d_Temp0, d_Temp1, kappa, dt, dx, dy);
 int id = (imax/2)*jmax + (jmax/2);
 fprintf(fp0,"%f\t %f\n", iter*dt, h_copy[id]);*/
 
-
 if(iter > 0 && iter % 100 == 0){
 printf("time(%d) = %f\n", iter, (float)iter*dt);
 }
@@ -232,6 +231,6 @@ for(int i=0; i<imax; ++i){
 fclose(fp);
 delete [] h_Temp0;
 
-
+printf("Program end\n");
 
 }
