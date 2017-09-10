@@ -143,11 +143,13 @@ h_Temp[id] = sin((float)i * dx * pi )*sin( (float)j * dy * pi);
   }
 }
 
+//parameter to match the original computation from Prof. Aoki
 float kappa = 0.1;
 float dt = 0.20*MIN2(dx*dx,dy*dy)/kappa;
 int itermax = 20601;
 
-array Temp0(nodes, h_Temp); //initiate on gpu
+//Initiate on gpu
+array Temp0(nodes, h_Temp);
 array Temp1(nodes, h_Temp); 
 
 float *d_Temp0 = Temp0.device<float>();
